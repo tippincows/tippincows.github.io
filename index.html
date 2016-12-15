@@ -1,48 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Powershell-comp2101 by tippincows</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <title>Powershell-comp2101 by tippincows</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/tippincows/Powershell-COMP2101">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/tippincows/Powershell-COMP2101/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/tippincows/Powershell-COMP2101/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <header>
+      <div class="inner">
+        <h1>Powershell-comp2101</h1>
+        <h2>Powershell Assignments from COMP2101 Fall 2016</h2>
+        <a href="https://github.com/tippincows" class="button"><small>Follow me on</small> GitHub</a>
+      </div>
+    </header>
 
-    <div class="wrapper">
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="powershell-assignment" class="anchor" href="#powershell-assignment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>powershell assignment</h1>
 
-      <section>
-        <div id="title">
-          <h1>Powershell-comp2101</h1>
-          <p>Powershell Assignments from COMP2101 Fall 2016</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/tippincows">tippincows</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+<h1>
+<a id="lucas-carroll" class="anchor" href="#lucas-carroll" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lucas Carroll</h1>
 
-        <p>Comp2101 Powershell Assignment</p>
-      </section>
+<h1>
+<a id="200245897" class="anchor" href="#200245897" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>200245897</h1>
 
+<h1>
+<a id="this-is-my-work" class="anchor" href="#this-is-my-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>this is my work</h1>
+
+<p>"----------------------------
+Operating System Information
+----------------------------"</p>
+
+<p>$manufacturer = (Get-WmiObject Win32_OperatingSystem).manufacturer
+$caption = (Get-WmiObject Win32_OperatingSystem).Name
+$version = (Get-WmiObject Win32_OperatingSystem).version
+$architecture = (Get-WmiObject Win32_OperatingSystem).osarchitecture
+$registereduser = (Get-WmiObject Win32_OperatingSystem).RegisteredUser
+$serialnumber = (Get-WmiObject Win32_OperatingSystem).serialnumber</p>
+
+<p>Write-output "Manufacturer : $manufacturer"
+Write-Output "Caption : $caption"
+Write-Output "Version : $version"
+Write-Output "Architecture : $architecture"
+Write-Output "Registered user : $registereduser"
+Write-Output "Serial Number : $serialnumber"</p>
+
+<p>“`n”</p>
+
+<p>"-----------------------------
+Computer Information
+------------------------------"</p>
+
+<p>$cmanufacturer = (Get-WmiObject Win32_computersystem).manufacturer
+$cmodel = (Get-WmiObject Win32_computersystem).model
+$ccaption = (Get-WmiObject Win32_computersystem).caption
+$cdomain = (Get-WmiObject Win32_computersystem).domain
+$cprimaryownername = (Get-WmiObject Win32_computersystem).primaryownername
+$csystemtype = (Get-WmiObject Win32_computersystem).systemtype</p>
+
+<p>Write-Output "Manufacturer : $cmanufacturer"
+Write-Output "Model : $cmodel"
+Write-Output "Caption : $ccaption"
+Write-Output "Domain : $cdomain"
+Write-Output "PrimaryOwnerName : $cprimaryownername"
+Write-Output "SystemType : $csystemtype"</p>
+
+<p>“`n”</p>
+
+<p>"------------------------------
+BIOS Information
+-------------------------------"</p>
+
+<p>$bmanufacturer = (Get-WmiObject Win32_BIOS).manufacturer
+$bdescription = (Get-WmiObject Win32_BIOS).description
+$bversion=(Get-WmiObject Win32_BIOS).version
+$bsmbiosbiosversion = (Get-WmiObject Win32_BIOS).smbiosbiosversion
+$bserialnumber = (Get-WmiObject Win32_BIOS).serialnumber</p>
+
+<p>Write-Output "Manufacturer : $bmanufacturer"
+Write-Output "Description : $bdescription"
+Write-Output "Version : $bversion"
+Write-Output "SMBIOSBIOSVersion : $smbiosbiosversion"
+Write-Output "SerialNumber : $bserialnumber"</p>
+
+<p>“`n”</p>
+
+<p>"----------------------------
+Processor Information
+-----------------------------"</p>
+
+<p>$pmanufacturer = (Get-WmiObject Win32_Processor).manufacturer
+$pname = (Get-WmiObject Win32_Processor).name
+$pcaption = (Get-WmiObject Win32_Processor).caption
+$pnumberofcores = (Get-WmiObject Win32_Processor).numberofcores
+$pmaxclockspeed = (Get-WmiObject Win32_Processor).maxclockspeed
+$pl2cachesize = (Get-WmiObject Win32_Processor).l2cachesize
+$pl3cachesize = (Get-WmiObject Win32_Processor).l3cachesize</p>
+
+<p>Write-Output "Manufacturer : $pmanufacturer"
+Write-Output "Name : $pname"
+Write-Output "Caption : $pcaption"
+Write-Output "NumberOfCores : $pnumberofcores"
+Write-Output "MaxClockSpeed : $pmaxclockspeed"
+Write-Output "L2CacheSize : $pl2cachesize"
+Write-Output "L3cacheSize : $pl3cachesize"</p>
+
+<p>“`n”</p>
+
+<p>"----------------------------
+Memory Information
+-----------------------------"</p>
+
+<p>$totalcapacity = 0
+Get-WmiObject -class win32_physicalmemory |
+foreach{
+New-Object -TypeName psobject -Property @{
+Manufacturer = $<em>.manufacturer
+"Speed(Mhz)" = $</em>.speed
+"Size(Mb)" = $<em>.capacity/1mb
+Bank = $</em>.banklabel
+Slot = $_.devicelocator
+}</p>
+
+<p>$totalcapacity += $_.capacity/1mb
+}|
+ft -auto Manufacturer, "Size(mb)", "Speed(Mhz)", Bank,Slot 
+"total RAM: ${totalcapacity}Mb "</p>
+
+<p>“`n”</p>
+
+<p>"--------------------------
+Network Connections
+---------------------------"</p>
+
+<p>Get-WmiObject Win32_NetworkAdapter
+? adaptertype -match "ethernet" |
+ForEach-Object {
+$nac = $_.GetRelated("Win32_NetworkAdapterConfiguration")</p>
+
+<p>New-Object PSObject -Property @{name=$<em>.name
+ipaddress=$nac.ipaddress|where-object {($</em> -is [string]) -and ($<em>.indexof(".") -gt 0)}
+ipgateway=$nac.defaultipgateway|where-object {($</em> -is [string]) -and ($<em>.indexof(".") -gt 0)}
+macaddress=$nac.macaddress|Where-Object {($</em> -is [string]) -and ($<em>.indexof(":") -gt 0)}
+speed=$nac.speed
+netmask=$nac.ipsubnet|Where-Object {($</em> -is [string]) -and ($_.indexof(".") -gt 0)}
+domain=$nac.dnsdomain
+hostname=$nac.dnshostname
+}
+}|
+Format-Table name,ipaddress,ipgateway,macaddress,Speed,Netmask,domain,hostname -AutoSize</p>
+
+<p>"---------------------------
+Disk Usage
+----------------------------"</p>
+
+<p>Get-WmiObject Win32_Volume -Filter "DriveType='3'" |
+ ForEach-Object {
+            New-Object PSObject -property  @{
+                id = $<em>.Name
+                providername = $</em>.Label
+                space = ([Math]::Round($<em>.FreeSpace /1GB,2))
+                size = ([Math]::Round($</em>.Capacity /1GB,2))
+                percentfree = ([Math]::Round($<em>.Capacity /1GB,2)) - ([Math]::Round($</em>.FreeSpace /1GB,2))
+            }
+        }</p>
+
+<p>Format-Table id,size"(GB)",space"(GB)",percentfree,providername -AutoSize</p>
+
+<p>"--------------------------
+Configured Printers
+---------------------------"</p>
+
+<p>Get-WmiObject -class win32_printer |    select name,     @{n="Default?";e={if($<em>.attributes -band 4){$attr="default"};$attr}},     @{n="Shared?";e={if($</em>.attributes -band 8){$attr="shared"};$attr}},     @{n="Status";e={switch($_.printerstatus){1{$stat="other"}                                            2{$stat="unknown"}                                            3{$stat="idle"}                                            4{$stat="printing"}                                            5{$stat="warming up"}                                            6{$stat="stopped printing"}                                            7{$stat="offline"}};                                            $stat}} |    Format-Table -AutoSize</p>
+
+<p>"------------------------
+Installed Software
+-------------------------"
+Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall* |
+Select-Object InstallDate, Publisher, DisplayName |
+Format-Table –AutoSize</p>
+
+<h1>
+<a id="lucas-carroll-1" class="anchor" href="#lucas-carroll-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lucas Carroll</h1>
+
+<h1>
+<a id="200245897-1" class="anchor" href="#200245897-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>200245897</h1>
+
+<h1>
+<a id="this-is-my-work-1" class="anchor" href="#this-is-my-work-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>This is My work</h1>
+        </section>
+
+        <aside id="sidebar">
+
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  
   </body>
 </html>
